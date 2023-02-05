@@ -5,7 +5,7 @@ from flask_cors import CORS
 
 from routes.login_routes import login_api_router
 from routes.disease_model import disease_api_router
-
+from routes.medbot import medbot_api_router
 app = FastAPI()
 
 app.add_middleware(
@@ -18,3 +18,4 @@ app.add_middleware(
 
 app.include_router(login_api_router)
 app.include_router(disease_api_router)
+app.include_router(medbot_api_router)
